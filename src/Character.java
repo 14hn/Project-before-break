@@ -18,5 +18,21 @@ public class Character {
         this.canControl = canControl;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public int getxLoc(){
+        return xLoc;
+    }
+
+    public int getyLoc(){
+        return yLoc;
+    }
+    
+    public Boolean getCanControl(){
+        return canControl;
+    }
+
 
 }
