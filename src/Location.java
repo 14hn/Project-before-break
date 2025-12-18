@@ -1,3 +1,4 @@
+
 public class Location{
 
     private String type = "";

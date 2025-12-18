@@ -1,3 +1,4 @@
+
 public class Character {
     private String name;
     private int xLoc;
@@ -21,18 +22,14 @@ public class Character {
     public String getName(){
         return name;
     }
-
     public int getxLoc(){
         return xLoc;
     }
-
     public int getyLoc(){
         return yLoc;
     }
-    
     public Boolean getCanControl(){
         return canControl;
     }
-
 
 }
