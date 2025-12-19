@@ -18,6 +18,7 @@ public class Neighborhood {
         JLabel left = new JLabel();
         JLabel right = new JLabel();
         JLabel interact = new JLabel();
+        JLabel inv = new JLabel();
 
 
         // sets the lables text after adding them to the panel
@@ -31,16 +32,20 @@ public class Neighborhood {
         right.setText("right: 0");
         panel.add(interact);
         interact.setText("interact: 0");
+        panel.add(inv);
+        inv.setText("inv: 0");
+
 
         // adds a key listener to the jframe
         frame.addKeyListener(new KeyListener(){
 
             // varribles for keeping track of key presses
-            int upCount = 0;
-            int downCount = 0;
-            int leftCount = 0;
-            int rightCount = 0;
-            int interactCount = 0;
+            int upCount = 1;
+            int downCount = 1;
+            int leftCount = 1;
+            int rightCount = 1;
+            int interactCount = 1;
+            int invCount = 1;
 
             @Override
             public void keyPressed(KeyEvent e) {
@@ -58,8 +63,11 @@ public class Neighborhood {
                     case KeyEvent.VK_RIGHT: // if pressed key is right arrow do:
                         right.setText("right: " + Integer.toString(rightCount++)); // changes label text
                         break;
-                    case KeyEvent.VK_E:
+                    case KeyEvent.VK_Z:
                         interact.setText("interact: " + Integer.toString(interactCount++));
+                        break;
+                    case KeyEvent.VK_X:
+                        inv.setText("inv: " + Integer.toString(invCount++));
                         break;
                 }
             }
@@ -79,10 +87,19 @@ public class Neighborhood {
 
         ArrayList<Neighborhood> playArea = new ArrayList<>();
         ArrayList<Neighborhood> row1 = new ArrayList<>();
+        //for (int i = 0; i >= 5; i++){
+          //  row1.add(i);
+        //}
+        playArea.addAll(row1);
         ArrayList<Neighborhood> row2 = new ArrayList<>();
+        playArea.addAll(row2);
         ArrayList<Neighborhood> row3 = new ArrayList<>();
+        playArea.addAll(row3);
         ArrayList<Neighborhood> row4 = new ArrayList<>();
+        playArea.addAll(row4);
         ArrayList<Neighborhood> row5 = new ArrayList<>();
-
+        playArea.addAll(row5);
+        // setting up the play area
+        System.out.println(playArea);
     }
 }
