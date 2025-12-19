@@ -1,5 +1,6 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class Neighborhood {
@@ -16,6 +17,7 @@ public class Neighborhood {
         JLabel down = new JLabel();
         JLabel left = new JLabel();
         JLabel right = new JLabel();
+        JLabel interact = new JLabel();
 
 
         // sets the lables text after adding them to the panel
@@ -27,6 +29,8 @@ public class Neighborhood {
         left.setText("left: 0");
         panel.add(right);
         right.setText("right: 0");
+        panel.add(interact);
+        interact.setText("interact: 0");
 
         // adds a key listener to the jframe
         frame.addKeyListener(new KeyListener(){
@@ -36,6 +40,7 @@ public class Neighborhood {
             int downCount = 0;
             int leftCount = 0;
             int rightCount = 0;
+            int interactCount = 0;
 
             @Override
             public void keyPressed(KeyEvent e) {
@@ -53,6 +58,9 @@ public class Neighborhood {
                     case KeyEvent.VK_RIGHT: // if pressed key is right arrow do:
                         right.setText("right: " + Integer.toString(rightCount++)); // changes label text
                         break;
+                    case KeyEvent.VK_E:
+                        interact.setText("interact: " + Integer.toString(interactCount++));
+                        break;
                 }
             }
 
@@ -68,6 +76,13 @@ public class Neighborhood {
     }
     public static void main(String[] args) throws Exception {
         new Neighborhood();
+
+        ArrayList<Neighborhood> playArea = new ArrayList<>();
+        ArrayList<Neighborhood> row1 = new ArrayList<>();
+        ArrayList<Neighborhood> row2 = new ArrayList<>();
+        ArrayList<Neighborhood> row3 = new ArrayList<>();
+        ArrayList<Neighborhood> row4 = new ArrayList<>();
+        ArrayList<Neighborhood> row5 = new ArrayList<>();
 
     }
 }
