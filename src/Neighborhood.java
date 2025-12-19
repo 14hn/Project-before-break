@@ -1,6 +1,5 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
 import javax.swing.*;
 
 public class Neighborhood {
@@ -84,22 +83,6 @@ public class Neighborhood {
     }
     public static void main(String[] args) throws Exception {
         new Neighborhood();
-
-        ArrayList<Neighborhood> playArea = new ArrayList<>();
-        ArrayList<Neighborhood> row1 = new ArrayList<>();
-        //for (int i = 0; i >= 5; i++){
-          //  row1.add(i);
-        //}
-        playArea.addAll(row1);
-        ArrayList<Neighborhood> row2 = new ArrayList<>();
-        playArea.addAll(row2);
-        ArrayList<Neighborhood> row3 = new ArrayList<>();
-        playArea.addAll(row3);
-        ArrayList<Neighborhood> row4 = new ArrayList<>();
-        playArea.addAll(row4);
-        ArrayList<Neighborhood> row5 = new ArrayList<>();
-        playArea.addAll(row5);
-        // setting up the play area
-        System.out.println(playArea);
+        
     }
 }
