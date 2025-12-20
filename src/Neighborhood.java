@@ -82,18 +82,36 @@ public class Neighborhood {
 
         frame.add(panel);
     }
+
+    @Override
+    public String toString(){
+        return "{type=}";
+    } 
+       
+
     public static void main(String[] args) throws Exception {
         new Neighborhood();
         Location emptySpace = new Location();
-        ArrayList<Location> playArea = new ArrayList<>();
+        ArrayList<Location> theNeighborhood = new ArrayList<>();
 
-        ArrayList<Location> row = new ArrayList<>();
-        for (int i = 0; i >= 5; i++){
-            row.add(emptySpace);
-        }
-        for (int i = 1; i >= 5; ){
-            playArea.addAll(row);
-        }
         
-    }
+
+        ArrayList<Location> street = new ArrayList<>();
+            
+            int addCounter = 0;
+            while(addCounter != 5){
+                street.add(emptySpace);
+                addCounter ++;
+            }
+        for (int i = 1; i >= 5; ){
+            theNeighborhood.addAll(street);
+        }
+        for(int i = 1; i >= 5; i ++){
+        System.out.println((street.get(i)).getSpace());
+        }
+        System.out.println(street.size());
+    }        
 }
+    
+
+

@@ -7,7 +7,7 @@ public class Location{
 
 
     public Location(){
-        type = "emnpty";
+        type = "empty";
         canInteract = false;
 }
     public Location(String type, Boolean canInteract){
@@ -15,6 +15,15 @@ public class Location{
         this.canInteract = canInteract;
     }
 
+    public String getSpace (){
+        return type;
+    }
+
+    public Boolean getCanInteract(){
+        return canInteract;
+    }
+
+    
 public static void location(String[] args) throws Exception {
     
 
