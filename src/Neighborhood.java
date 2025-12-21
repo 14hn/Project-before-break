@@ -91,25 +91,28 @@ public class Neighborhood {
 
     public static void main(String[] args) throws Exception {
         new Neighborhood();
-        Location emptySpace = new Location();
-        ArrayList<Location> theNeighborhood = new ArrayList<>();
+        Locations emptySpace = new Locations();
+        ArrayList<ArrayList<Locations>> theNeighborhood = new ArrayList<>();
+        ArrayList<Locations> street = new ArrayList<>();
+            
+        for (int i = 0; i <= 4; i++){
+            street.add(emptySpace);
+        }
+
+        for (int i = 0; i <= 4; i++){
+            theNeighborhood.add(street);
+        }
+        String neighborhood = "";
+        for (ArrayList<Locations> list: theNeighborhood){
+            for (Locations element: list){
+                neighborhood += element.toString();
+            }
+            neighborhood += "\n";
+        }
+        System.out.println(neighborhood);
 
         
 
-        ArrayList<Location> street = new ArrayList<>();
-            
-            int addCounter = 0;
-            while(addCounter != 5){
-                street.add(emptySpace);
-                addCounter ++;
-            }
-        for (int i = 1; i >= 5; ){
-            theNeighborhood.addAll(street);
-        }
-        for(int i = 1; i >= 5; i ++){
-        System.out.println((street.get(i)).getSpace());
-        }
-        System.out.println(street.size());
     }        
 }
     

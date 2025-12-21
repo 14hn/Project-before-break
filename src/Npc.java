@@ -1,5 +1,4 @@
-
-public class Npc extends Character{
+public class Npc extends Character {
     
     public Npc(){
 

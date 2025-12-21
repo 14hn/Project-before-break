@@ -5,11 +5,6 @@ public class Player extends Character{
 
     }
     public void movePlayer(String direction){
-        if (direction == "w"){
-            
-        }
-        if(direction == "a"){
-
-        }
+    
     }
 }

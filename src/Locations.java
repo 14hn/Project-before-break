@@ -1,16 +1,16 @@
 
-public class Location{
+public class Locations{
 // create loaction objects
 // empty location should be in main then types of location in their own class
     private String type;
     private boolean canInteract;
 
 
-    public Location(){
-        type = "empty";
+    public Locations(){
+        type = "x"; //x represents an empty space visually when displaying the play area
         canInteract = false;
 }
-    public Location(String type, Boolean canInteract){
+    public Locations(String type, Boolean canInteract){
         this.type = type;
         this.canInteract = canInteract;
     }
@@ -21,6 +21,10 @@ public class Location{
 
     public Boolean getCanInteract(){
         return canInteract;
+    }
+    
+    public String toString(){
+        return type + " ";
     }
 
     
