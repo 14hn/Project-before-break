@@ -1,11 +1,11 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
+
 import javax.swing.*;
 
-public class Neighborhood {
+public class Input {
 
-    public Neighborhood(){
+    public Input(){
         JFrame frame = new JFrame(); // creates JFrame object
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,7 +34,6 @@ public class Neighborhood {
         interact.setText("interact: 0");
         panel.add(inv);
         inv.setText("inv: 0");
-
 
         // adds a key listener to the jframe
         frame.addKeyListener(new KeyListener(){
@@ -83,36 +82,8 @@ public class Neighborhood {
         frame.add(panel);
     }
 
-    @Override
-    public String toString(){
-        return "{type=}";
-    } 
-       
-
     public static void main(String[] args) throws Exception {
-        new Neighborhood();
-        Locations emptySpace = new Locations();
-        ArrayList<ArrayList<Locations>> theNeighborhood = new ArrayList<>();
-        ArrayList<Locations> street = new ArrayList<>();
-            
-        for (int i = 0; i <= 4; i++){
-            street.add(emptySpace);
-        }
-
-        for (int i = 0; i <= 4; i++){
-            theNeighborhood.add(street);
-        }
-        String neighborhood = "";
-        for (ArrayList<Locations> list: theNeighborhood){
-            for (Locations element: list){
-                neighborhood += element.toString();
-            }
-            neighborhood += "\n";
-        }
-        System.out.println(neighborhood);
-
         
-
     }        
 }
     

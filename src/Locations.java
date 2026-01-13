@@ -1,4 +1,3 @@
-
 public class Locations{
 // create loaction objects
 // empty location should be in main then types of location in their own class
@@ -27,9 +26,4 @@ public class Locations{
         return type + " ";
     }
 
-    
-public static void location(String[] args) throws Exception {
-    
-
-    }
 }

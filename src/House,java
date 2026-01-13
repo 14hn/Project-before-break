@@ -1,3 +1,3 @@
-private class House extends Loaction(){
-    private
+public class House extends Locations {
+
 }
