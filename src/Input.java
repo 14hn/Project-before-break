@@ -2,7 +2,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.*;
 
-public class Input {
+public class Input{
     private int moveUp = 0;
     private int moveDown = 0;
     private int moveRight = 0;
@@ -21,15 +21,17 @@ public class Input {
         return moveRight;
     }
 
-    public void resetMoveDirection(String moveDirection){
-        switch(moveDirection) {
-            case "up":
+    public void resetMoveDirection(int moveDirectionCode){
+        switch(moveDirectionCode) {
+            case 1:
                 moveUp = 0;
-                break;
-            case "down":
+                //needs break
+            case 2:
                 moveDown = 0;
-
-                //finish
+            case 3:
+                moveLeft = 0;
+            case 4:
+                moveRight = 0;
         }
     }
 
