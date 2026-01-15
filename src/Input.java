@@ -2,12 +2,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.*;
 
-public class Input{
+public class Input extends Main{
     private int moveUp = 0;
     private int moveDown = 0;
     private int moveRight = 0;
     private int moveLeft = 0;
-
+    
     public int getMoveUp(){
         return moveUp;
     }
@@ -44,6 +44,7 @@ public class Input{
         JLabel right = new JLabel();
         JLabel interact = new JLabel();
         JLabel inv = new JLabel();
+        JLabel grid = new JLabel();
 
 
         // sets the lables text after adding them to the panel
@@ -59,6 +60,8 @@ public class Input{
         interact.setText("interact: 0");
         panel.add(inv);
         inv.setText("inv: 0");
+        panel.add(grid);
+        grid.setText(getMergedGrid());
 
         // adds a key listener to the jframe
         frame.addKeyListener(new KeyListener(){

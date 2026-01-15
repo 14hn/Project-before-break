@@ -1,8 +1,12 @@
 import java.util.ArrayList;
 
-
 public class Main {
-    
+
+    public static ArrayList<ArrayList<Locations>> theNeighborhood; 
+    public static ArrayList<Locations> street;
+    private static String mergedGrid = "";
+    private static final Locations emptySpace = new Locations();
+
     @SuppressWarnings({ "rawtypes", "unchecked" })//warnings suppressed as the only use for this function is to build arrays for each object
     public static ArrayList arrayBuilder(ArrayList nameOfRow, ArrayList compleArrayList, Locations objectName, int xSize, int ySize){
         for (int i = 0; i <= xSize-1; i++){
@@ -14,14 +18,19 @@ public class Main {
         return compleArrayList;
     }
 
+    public ArrayList<ArrayList<Locations>> getTheNeighborhood(){
+        return theNeighborhood;
+    }
+    public ArrayList<Locations> getStreet(){
+        return street;
+    }
+    public String getMergedGrid(){
+        return mergedGrid;
+    }
+
     public static void main(String[] args) throws Exception {
 
         Input runner = new Input();//creates frame object
-        
-        String mergedGrid = "";
-        Locations emptySpace = new Locations();//empty location object creation
-        ArrayList<Locations> street = new ArrayList<>();
-        ArrayList<ArrayList<Locations>> theNeighborhood = new ArrayList<>();
         
         arrayBuilder(street, theNeighborhood, emptySpace, 7, 7);//creates a 2d array list for holding empty spaces
         
@@ -32,6 +41,7 @@ public class Main {
             mergedGrid += "\n";
         }
         System.out.println(mergedGrid);
+        
         
         /* 
         while(true){
@@ -61,5 +71,6 @@ public class Main {
         */
        
     }
+    
 
 }
