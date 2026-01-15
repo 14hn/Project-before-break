@@ -23,10 +23,10 @@ public class Input extends Main{
 
     public void resetMoveDirection(int moveDirectionCode){
         switch(moveDirectionCode) {
-            case 1 -> moveUp = 0;
-            case 2 -> moveDown = 0;
-            case 3 -> moveLeft = 0;
-            case 4 -> moveRight = 0;
+            case 1: moveUp = 0;
+            case 2: moveDown = 0;
+            case 3: moveLeft = 0;
+            case 4: moveRight = 0;
         }
     }
 
