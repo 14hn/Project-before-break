@@ -1,44 +1,11 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 import javax.swing.*;
 
-public class Input{
-    private int moveUp = 0;
-    private int moveDown = 0;
-    private int moveRight = 0;
-    private int moveLeft = 0;
+public class Neighborhood {
 
-    public int getMoveUp(){
-        return moveUp;
-    }
-    public int getMoveDown(){
-        return moveDown;
-    }
-    public int getMoveLeft(){
-        return moveLeft;
-    }
-    public int getMoveRight(){
-        return moveRight;
-    }
-
-    public void resetMoveDirection(int moveDirectionCode){
-        switch(moveDirectionCode) {
-            case 1:
-                moveUp = 0;
-                break;
-            case 2:
-                moveDown = 0;
-                break;
-            case 3:
-                moveLeft = 0;
-                break;
-            case 4:
-                moveRight = 0;
-                break;
-        }
-    }
-
-    public Input(){
+    public Neighborhood(){
         JFrame frame = new JFrame(); // creates JFrame object
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -68,6 +35,7 @@ public class Input{
         panel.add(inv);
         inv.setText("inv: 0");
 
+
         // adds a key listener to the jframe
         frame.addKeyListener(new KeyListener(){
 
@@ -85,19 +53,15 @@ public class Input{
                 switch(keyCode) { //if else statments for player input, VK_"Key" is used to ensure anyform of up arrow work
                     case KeyEvent.VK_UP: // if pressed key is up arrow do
                         up.setText("up: " + Integer.toString(upCount++)); // changes label text
-                        moveUp = 1;
                         break;
                     case KeyEvent.VK_DOWN: // if pressed key is down arrow do:
                         down.setText("down: " + Integer.toString(downCount++)); // changes label text
-                        moveDown = 1;
                         break;
                     case KeyEvent.VK_LEFT: // if pressed key is left arrow do:
                         left.setText("left: " + Integer.toString(leftCount++)); // changes label text
-                        moveLeft = 1;
                         break;
                     case KeyEvent.VK_RIGHT: // if pressed key is right arrow do:
                         right.setText("right: " + Integer.toString(rightCount++)); // changes label text
-                        moveRight = 1;
                         break;
                     case KeyEvent.VK_Z:
                         interact.setText("interact: " + Integer.toString(interactCount++));
@@ -118,13 +82,27 @@ public class Input{
 
         frame.add(panel);
     }
-    
-
     public static void main(String[] args) throws Exception {
+        new Neighborhood();
 
-        }
-    }        
+        ArrayList<Neighborhood> playArea = new ArrayList<>();
+        ArrayList<Neighborhood> row1 = new ArrayList<>();
+        //for (int i = 0; i >= 5; i++){
+          //  row1.add(i);
+        //}
+        playArea.addAll(row1);
+        ArrayList<Neighborhood> row2 = new ArrayList<>();
+        playArea.addAll(row2);
+        ArrayList<Neighborhood> row3 = new ArrayList<>();
+        playArea.addAll(row3);
+        ArrayList<Neighborhood> row4 = new ArrayList<>();
+        playArea.addAll(row4);
+        ArrayList<Neighborhood> row5 = new ArrayList<>();
+        playArea.addAll(row5);
+        // setting up the play area
+        System.out.println(playArea);
 
-    
 
-
+        
+    }
+}

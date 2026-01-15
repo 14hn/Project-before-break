@@ -36,13 +36,13 @@ public class Main {
         
 
         while(true){
-        System.out.println(runner.getMoveDown());
-        if((runner.getMoveDown()) != 0){
+        System.out.println(runner.getMoveUp());
+        if((runner.getMoveUp()) != 0){
             TimeUnit.MILLISECONDS.sleep(10);
             runner.resetMoveDirection(1);
         }
         System.out.println(runner.getMoveDown());
-        if((runner.getMoveUp()) != 0){
+        if((runner.getMoveDown()) != 0){
             TimeUnit.MILLISECONDS.sleep(10);
             runner.resetMoveDirection(2);
         }
