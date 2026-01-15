@@ -6,7 +6,7 @@ public class Locations{
 
 
     public Locations(){
-        type = "x"; //x represents an empty space visually when displaying the play area
+        type = "[=*x*=]"; //x represents an empty space visually when displaying the play area
         canInteract = false;
 }
     public Locations(String type, Boolean canInteract){
@@ -22,8 +22,11 @@ public class Locations{
         return canInteract;
     }
     
+    @Override
     public String toString(){
         return type + " ";
     }
+
+    
 
 }

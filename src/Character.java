@@ -1,6 +1,6 @@
 
 
-public class Character {
+public class Character extends Main{
     private String name;
     private int xLoc;
     private int yLoc;

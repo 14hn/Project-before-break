@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 
 public class Main {
@@ -19,7 +18,7 @@ public class Main {
 
         Input runner = new Input();//creates frame object
         
-        String neighborhood = "";
+        String mergedGrid = "";
         Locations emptySpace = new Locations();//empty location object creation
         ArrayList<Locations> street = new ArrayList<>();
         ArrayList<ArrayList<Locations>> theNeighborhood = new ArrayList<>();
@@ -28,13 +27,13 @@ public class Main {
         
         for (ArrayList<Locations> list: theNeighborhood){ //for every locations arrayList in theNeighborhood Arraylist
             for (Locations element: list){ //for every element in locations arrayList
-                neighborhood += element.toString(); 
+                mergedGrid += element.toString(); 
             }
-            neighborhood += "\n";
+            mergedGrid += "\n";
         }
-        System.out.println(neighborhood);
+        System.out.println(mergedGrid);
         
-
+        /* 
         while(true){
         System.out.println(runner.getMoveUp());
         if((runner.getMoveUp()) != 0){
@@ -59,7 +58,8 @@ public class Main {
         TimeUnit.MILLISECONDS.sleep(50);
 
         }
-        
+        */
+       
     }
 
 }
