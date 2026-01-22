@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 
 public class Npc extends Character {
+
+    public static ArrayList<ArrayList<Locations>> npcTheNeighborhood; 
+    public static ArrayList<Locations> npcStreet;
     
     public Npc(){
 
